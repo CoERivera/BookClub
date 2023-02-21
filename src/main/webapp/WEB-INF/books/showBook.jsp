@@ -56,7 +56,7 @@
 									thoughts:</h5>
 							</c:when>
 							<c:otherwise>
-								<h5 class="card-title">${book.user.name}read${book.title}
+								<h5 class="card-title">${book.user.name} read ${book.title}
 									by ${book.author}.</h5>
 								<h5 class="card-subtitle mb-2 text-muted">Here are
 									${book.user.name}'s thoughts:</h5>

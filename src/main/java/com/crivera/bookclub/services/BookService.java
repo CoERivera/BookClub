@@ -1,7 +1,6 @@
 package com.crivera.bookclub.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,10 +27,11 @@ public class BookService {
 
 	// Get one book
 	public Book getOneBook(Long id) {
-		Optional<Book> optionalBook = bookRepository.findById(id);
-		if (optionalBook.isEmpty())
-			return null;
-		return optionalBook.get();
+//		Optional<Book> optionalBook = bookRepository.findById(id);
+//		if (optionalBook.isEmpty())
+//			return null;
+//		return optionalBook.get();
+		return bookRepository.findById(id).orElse(null);
 	}
 
 	// Save book (update/create)
